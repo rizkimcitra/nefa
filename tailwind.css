@@ -22,3 +22,18 @@
     @apply font-primary bg-white text-[#222222];
   }
 }
+
+@layer utilities {
+  .layout {
+    @apply mx-auto w-11/12 max-w-6xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full border px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply from-primary-50 rounded-full border-transparent bg-gradient-to-b to-blue-600 text-white;
+  }
+  .btn-secondary {
+    @apply border-primary-50 text-primary-50 bg-transparent;
+  }
+}
