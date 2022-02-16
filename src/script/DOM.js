@@ -7,7 +7,7 @@ const anchorInsideNav = document.querySelectorAll("#aside a");
 const handleAside = (aside, isClose = false) => {
   if (!isClose) {
     aside?.classList?.toggle("hidden");
-    document?.documentElement?.classList.toggle("overflow-y-hidden");
+    document?.body?.classList.toggle("overflow-y-hidden");
     setTimeout(() => {
       aside?.classList?.toggle("opacity-100");
       aside?.classList?.toggle("opacity-0");
@@ -17,7 +17,7 @@ const handleAside = (aside, isClose = false) => {
     aside?.classList?.toggle("opacity-100");
     aside?.classList?.toggle("opacity-0");
     setTimeout(() => {
-      document?.documentElement?.classList.toggle("overflow-y-hidden");
+      document?.body?.classList.toggle("overflow-y-hidden");
       aside?.classList?.toggle("hidden");
     }, 200);
   }
