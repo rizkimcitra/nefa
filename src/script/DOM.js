@@ -6,19 +6,19 @@ const anchorInsideNav = document.querySelectorAll("#aside a");
 
 const handleAside = (aside, isClose = false) => {
   if (!isClose) {
-    aside?.classList.toggle("hidden");
-    document?.documentElement.classList.toggle("overflow-y-hidden");
+    aside?.classList?.toggle("hidden");
+    document?.documentElement?.classList.toggle("overflow-y-hidden");
     setTimeout(() => {
-      aside?.classList.toggle("opacity-100");
-      aside?.classList.toggle("opacity-0");
+      aside?.classList?.toggle("opacity-100");
+      aside?.classList?.toggle("opacity-0");
     }, 100);
   }
   if (isClose) {
-    aside?.classList.toggle("opacity-100");
-    aside?.classList.toggle("opacity-0");
+    aside?.classList?.toggle("opacity-100");
+    aside?.classList?.toggle("opacity-0");
     setTimeout(() => {
-      document?.documentElement.classList.toggle("overflow-y-hidden");
-      aside?.classList.toggle("hidden");
+      document?.documentElement?.classList.toggle("overflow-y-hidden");
+      aside?.classList?.toggle("hidden");
     }, 200);
   }
 };
@@ -30,7 +30,7 @@ const handleAside = (aside, isClose = false) => {
  * @param {keyof HTMLElementEventMap} type - The type of event to listen for.
  * @param {() => any} callback - The function that will be called when the event is triggered.
  */
-const eventMaker = (element, type, callback) => element.addEventListener(type, callback);
+const eventMaker = (element, type, callback) => element?.addEventListener(type, callback);
 
 eventMaker(openAsideButton, "click", () => handleAside(aside));
 eventMaker(closeAsideButton, "click", () => handleAside(aside, true));
