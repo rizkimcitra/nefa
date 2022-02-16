@@ -1,7 +1,7 @@
 {
   "name": "nefa",
   "version": "1.0.0",
-  "description": "slicing design from mas Ivan",
+  "description": "Slicing design NeFa from mas Ivan",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,9 +9,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.7",
     "tailwindcss": "^3.0.22"
+  },
+  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
