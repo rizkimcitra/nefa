@@ -12,4 +12,10 @@ If you want to edit the UI, make sure to run this command:
 yarn install
 ```
 
+and then
+
+```bash
+yarn dev
+```
+
 so tailwindcss will generate utility classes you need
