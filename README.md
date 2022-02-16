@@ -1,6 +1,8 @@
 # <p align="center"> [WIP] NeFa </p>
 
-Slicing Design from @Irvan Moses
+NeFa is a web application that provides buying and selling of cryptocurrencies
+
+designed with love from [@irvanmoses](https://github.com/irvanmoses).
 
 Run this app without editing, just open `index.html` file
 
