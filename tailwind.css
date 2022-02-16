@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   h1 {
     @apply text-3xl font-bold md:text-4xl;
   }
@@ -21,11 +24,21 @@
   body {
     @apply font-primary bg-white text-[#222222];
   }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    @apply appearance-none;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    @apply appearance-none;
+  }
 }
 
 @layer utilities {
   .layout {
-    @apply mx-auto w-11/12 max-w-6xl;
+    @apply mx-auto w-11/12 max-w-7xl;
   }
   .btn {
     @apply inline-flex items-center justify-center rounded-full border px-6 lg:px-8;
@@ -36,4 +49,11 @@
   .btn-secondary {
     @apply border-primary-50 text-primary-50 bg-transparent;
   }
+}
+
+.bg-trusted {
+  background-image: url(./src/img/svg/bg-trusted.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

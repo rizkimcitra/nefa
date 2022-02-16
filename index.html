@@ -20,23 +20,7 @@
           <img src="./src/img/logo.png" alt="Nefa Logo" class="object-cover" />
         </div>
 
-        <nav class="hidden items-center space-x-6 lg:flex">
-          <a href="#" class="hover:text-primary-50 inline-flex items-center font-medium">Cryptocurrency</a>
-          <a href="#" class="hover:text-primary-50 inline-flex items-center font-medium">Exchanges</a>
-          <a href="#" class="hover:text-primary-50 inline-flex items-center font-medium">Watchlist</a>
-          <a href="#" class="hover:text-primary-50 inline-flex items-center font-medium">NFT</a>
-          <a href="#" class="hover:text-primary-50 inline-flex items-center font-medium">Portfolio</a>
-          <a href="#" class="hover:text-primary-50 inline-flex items-center space-x-2 font-medium"
-            >Products
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-        </nav>
+        <nav class="hidden items-center space-x-6 lg:flex" id="nav-desktop"></nav>
 
         <div class="hidden items-center space-x-4 lg:flex">
           <button class="btn btn-secondary py-2">Log In</button>
@@ -92,14 +76,7 @@
           </button>
         </header>
         <main>
-          <nav class="flex w-full flex-col">
-            <a href="#" class="inline-flex items-center py-3 px-4">Cryptocurrency</a>
-            <a href="#" class="inline-flex items-center py-3 px-4">Exchanges</a>
-            <a href="#" class="inline-flex items-center py-3 px-4">Watchlist</a>
-            <a href="#" class="inline-flex items-center py-3 px-4">NFT</a>
-            <a href="#" class="inline-flex items-center py-3 px-4">Portfolio</a>
-            <a href="#" class="inline-flex items-center py-3 px-4">Products</a>
-          </nav>
+          <nav class="flex w-full flex-col" id="nav-mobile"></nav>
           <div
             class="mt-12 flex w-full flex-col space-y-4 px-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-3"
           >
@@ -135,7 +112,7 @@
               <button class="btn btn-secondary py-3">Download App</button>
             </div>
           </section>
-          <figure class="hidden items-center justify-end lg:flex">
+          <figure class="animate-fly hidden items-center justify-end lg:flex">
             <img
               src="./src/img/hero-image.png"
               alt="Illustration"
@@ -147,18 +124,33 @@
 
       <div class="mt-8 bg-white">
         <div
-          class="layout grid flex-auto -translate-y-28 grid-cols-1 space-y-4 rounded-2xl border bg-white py-4 shadow-lg lg:grid-cols-3 lg:space-y-0 lg:divide-x"
+          class="layout grid flex-auto -translate-y-28 grid-cols-1 space-y-4 rounded-2xl border bg-white py-4 shadow-sm lg:grid-cols-3 lg:space-y-0 lg:divide-x"
         >
           <div class="px-6">
             <header class="mb-2 flex items-center justify-between lg:mb-4">
-              <h2 class="text-base font-normal">🔥Trending</h2>
-              <a href="#">More &rarr;</a>
+              <h2 class="text-base font-semibold lg:text-lg">🔥Trending</h2>
+              <a href="#" class="text-primary-50 inline-flex items-center"
+                ><span>More</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
             </header>
 
             <div class="flex flex-auto flex-col items-stretch">
               <div class="flex items-center py-4 lg:py-6">
-                <p class="w-full">Name</p>
-                <p class="w-full">Price</p>
+                <p class="w-full font-medium">Name</p>
+                <p class="w-full font-medium">Price</p>
+                <p class="hidden w-full font-medium lg:block">Chart</p>
               </div>
               <div class="flex items-center border-b border-gray-300 py-3">
                 <div class="flex w-full items-center space-x-2">
@@ -168,6 +160,36 @@
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-green-500">+</span>
                   <span>$43,180.13</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="114"
+                    height="41"
+                    viewBox="0 0 114 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 13.4998C11.6274 9.19389 1 27.4998 0 24.9998V40.9998H113.5V24.9998C101 18.9998 99.5 0.499835 89.5 6.99978C79.5 13.4997 73.5 4.49984 59 0.499837C44.5 -3.50016 37.5 22.4997 20 13.4998Z"
+                      fill="url(#paint0_linear_1_150)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_150"
+                        x1="56.75"
+                        y1="-4.50024"
+                        x2="56.75"
+                        y2="38.4998"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" />
+                        <stop offset="0.0001" stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                        <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
               <div class="flex items-center border-b border-gray-300 py-3">
@@ -179,6 +201,33 @@
                   <span class="text-red-500">-</span>
                   <span>$3,480.65</span>
                 </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="113"
+                    height="44"
+                    viewBox="0 0 113 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 17.9999C13.2991 25.4926 1 25.4216 0 22.9216V43.4999H113V3.49993C100.5 -2.50007 102 4.92159 92 11.4215C82 17.9215 70 -11.5001 58 6.99994C49.8145 19.6193 36.5 -5.00006 19 17.9999Z"
+                      fill="url(#paint0_linear_1_165)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_165"
+                        x1="56.5"
+                        y1="0.798828"
+                        x2="56.5"
+                        y2="40.9999"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#FFBDBD" />
+                        <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
               </div>
               <div class="flex items-center border-b border-gray-300 py-3">
                 <div class="flex w-full items-center space-x-2">
@@ -189,6 +238,33 @@
                   <span class="text-green-500">+</span>
                   <span> $150,20 </span>
                 </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="114"
+                    height="42"
+                    viewBox="0 0 114 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M23 14.0004C13.8662 11.717 1 25.4223 0 22.9223V42.0001H113.5V22.9223C101 16.9223 100.5 6.00011 83 11.5004C71.6219 15.0765 66 9.00037 58 2.50034C46.326 -6.98482 45 19.5001 23 14.0004Z"
+                      fill="url(#paint0_linear_1_156)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_156"
+                        x1="56.75"
+                        y1="-4.99988"
+                        x2="56.75"
+                        y2="38.0001"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
               </div>
               <div class="flex items-center py-3">
                 <div class="flex w-full items-center space-x-2">
@@ -198,118 +274,472 @@
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-green-500">+</span>
                   <span>$0.1572</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="114"
+                    height="48"
+                    viewBox="0 0 114 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.5 7.99951C12.925 2.40849 1 26.9928 0 24.4928V47.5H114V7.99951C99 9.00003 102 35.5 83 12C75.5013 2.72537 68 27.4293 55.5 4.00004C48.4196 -9.27093 41.5 23.4994 20.5 7.99951Z"
+                      fill="url(#paint0_linear_1_162)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_162"
+                        x1="57"
+                        y1="-9.49994"
+                        x2="57"
+                        y2="43.0001"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="px-6">
             <header class="mb-2 flex items-center justify-between lg:mb-4">
-              <h2 class="text-base font-normal">🚀Top Gainers</h2>
-              <a href="#">More &rarr;</a>
+              <h2 class="text-base font-semibold lg:text-lg">🚀Top Gainers</h2>
+              <a href="#" class="text-primary-50 inline-flex items-center"
+                ><span>More</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
             </header>
 
             <div class="flex flex-auto flex-col items-stretch">
               <div class="flex items-center py-4 lg:py-6">
-                <p class="w-full">Name</p>
-                <p class="w-full">Price</p>
+                <p class="w-full font-medium">Name</p>
+                <p class="w-full font-medium">Price</p>
               </div>
               <div class="flex items-center border-b border-gray-300 py-3">
                 <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/bitcoin.svg" alt="bitcoin" />
-                  <p>Bitcoin</p>
+                  <img src="./src/img/svg/pappay.svg" alt="pappay" />
+                  <p>PAPPAY</p>
                 </div>
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-green-500">+</span>
-                  <span>$43,180.13</span>
+                  <span>$0.00374</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="114"
+                    height="41"
+                    viewBox="0 0 114 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 13.4998C11.6274 9.19389 1 27.4998 0 24.9998V40.9998H113.5V24.9998C101 18.9998 99.5 0.499835 89.5 6.99978C79.5 13.4997 73.5 4.49984 59 0.499837C44.5 -3.50016 37.5 22.4997 20 13.4998Z"
+                      fill="url(#paint0_linear_1_153)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_153"
+                        x1="56.75"
+                        y1="-4.50024"
+                        x2="56.75"
+                        y2="38.4998"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="0.0001" stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                        <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
               <div class="flex items-center border-b border-gray-300 py-3">
                 <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/etherium.svg" alt="etherium" />
-                  <p>Etherium</p>
-                </div>
-                <div class="flex w-full items-center space-x-1">
-                  <span class="text-red-500">-</span>
-                  <span>$3,480.65</span>
-                </div>
-              </div>
-              <div class="flex items-center border-b border-gray-300 py-3">
-                <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/solana.svg" alt="solana" />
-                  <p>Solana</p>
+                  <img src="./src/img/svg/btc-asia.svg" alt="bitcoin asia" />
+                  <p>Bitcoin Asia</p>
                 </div>
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-green-500">+</span>
-                  <span> $150,20 </span>
+                  <span>$0.02096</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="110"
+                    height="46"
+                    viewBox="0 0 110 46"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.83333 30.3457L0 35V45.5H110V0L108.167 0.318199C106.333 0.636398 102.667 1.2728 99 5.45244C95.3333 9.63209 91.6667 17.355 88 20.9498C84.3333 24.5446 80.6667 24.0114 77 20.8323C73.3333 17.6532 69.6667 11.8283 66 9.07539C62.3333 6.32251 58.6667 6.64169 55 8.13074C51.3333 9.6198 47.6667 12.2787 44 13.689C40.3333 15.0993 36.6667 15.2609 33 14.4767C29.3333 13.6925 25.6667 11.9625 22 10.5711C18.3333 9.17972 14.6667 8.12702 11 12.2549C7.33333 16.3829 3.66667 25.6914 1.83333 30.3457Z"
+                      fill="url(#paint0_linear_1_168)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_168"
+                        x1="55"
+                        y1="-8"
+                        x2="55"
+                        y2="40.5"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" />
+                        <stop offset="0.0001" stop-color="#28C165" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex items-center border-b border-gray-300 py-3">
+                <div class="flex w-full items-center space-x-2">
+                  <img src="./src/img/svg/moonrock.svg" alt="moonrock" />
+                  <p>MoonRock</p>
+                </div>
+                <div class="flex w-full items-center space-x-1">
+                  <span class="text-green-500">+</span>
+                  <span>$0.004907</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="117"
+                    height="45"
+                    viewBox="0 0 117 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31 12.0002C21.8662 9.71689 16 30.5002 0 13.5002V45.0001H116.5V25.9224C104 19.9224 98 26.5001 95 6.50022C93.2308 -5.29465 78.5 2.50023 60 22.5002C49.7861 33.5423 53 17.5 31 12.0002Z"
+                      fill="url(#paint0_linear_1_159)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_159"
+                        x1="58.25"
+                        y1="-2.49988"
+                        x2="58.25"
+                        y2="42.0001"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
               <div class="flex items-center py-3">
                 <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/dogecoin.svg" alt="dogecoin" />
-                  <p>Dogecoin</p>
+                  <img src="./src/img/svg/ninjafloki.svg" alt="ninjafloki" />
+                  <p>NinjaFloki</p>
                 </div>
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-green-500">+</span>
-                  <span>$0.1572</span>
+                  <span>$0.000123</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="117"
+                    height="34"
+                    viewBox="0 0 117 34"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.4375 3.73199L0 0V33.5H117V9.83963L114.562 7.68339C112.125 5.52716 107.25 1.2147 102.375 1.32254C97.5054 1.43026 92.6359 5.94844 87.7663 10.4666L87.75 10.4817C82.875 15.0049 78 19.5232 73.125 18.9508C68.25 18.3783 63.375 12.7151 58.5 12.6309C53.625 12.5466 48.75 18.0414 43.875 15.4161C39 12.7908 34.125 2.04551 29.25 1.85482C24.375 1.66413 19.5 12.028 14.625 13.478C9.75 14.928 4.875 7.46399 2.4375 3.73199L2.4375 3.73199Z"
+                      fill="url(#paint0_linear_1_171)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_171"
+                        x1="58.5"
+                        y1="-4"
+                        x2="58.5"
+                        y2="31"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="px-6">
             <header class="mb-2 flex items-center justify-between lg:mb-4">
-              <h2 class="text-base font-normal">💎Recently Added</h2>
-              <a href="#">More &rarr;</a>
+              <h2 class="text-base font-semibold lg:text-lg">💎Recently Added</h2>
+              <a href="#" class="text-primary-50 inline-flex items-center"
+                ><span>More</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
             </header>
 
             <div class="flex flex-auto flex-col items-stretch">
               <div class="flex items-center py-4 lg:py-6">
-                <p class="w-full">Name</p>
-                <p class="w-full">Price</p>
+                <p class="w-full font-medium">Name</p>
+                <p class="w-full font-medium">Price</p>
               </div>
               <div class="flex items-center border-b border-gray-300 py-3">
                 <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/bitcoin.svg" alt="bitcoin" />
-                  <p>Bitcoin</p>
-                </div>
-                <div class="flex w-full items-center space-x-1">
-                  <span class="text-green-500">+</span>
-                  <span>$43,180.13</span>
-                </div>
-              </div>
-              <div class="flex items-center border-b border-gray-300 py-3">
-                <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/etherium.svg" alt="etherium" />
-                  <p>Etherium</p>
+                  <img src="./src/img/svg/metacraft.svg" alt="metacraft" />
+                  <p>MetaCraft</p>
                 </div>
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-red-500">-</span>
-                  <span>$3,480.65</span>
+                  <span>$0.0608</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="113"
+                    height="44"
+                    viewBox="0 0 113 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.69048 13.1331L0 15.7728V44H113V6.31494L110.31 7.78257C107.619 9.2502 102.238 12.1855 96.8571 15.9061C91.4762 19.6267 86.0952 24.1327 80.7143 20.8813C75.3333 17.6299 69.9524 6.62118 64.5714 2.32524C59.1905 -1.97071 53.8095 0.446171 48.4286 3.47297C43.0476 6.49976 37.6667 10.1365 32.2857 9.64835C26.9048 9.16022 21.5238 4.54726 16.1429 4.88053C10.7619 5.21381 5.38095 10.4933 2.69048 13.1331Z"
+                      fill="url(#paint0_linear_1_174)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_174"
+                        x1="56.5"
+                        y1="-8"
+                        x2="56.5"
+                        y2="40.5"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#FFBDBD" />
+                        <stop offset="1" stop-color="#FFBDBD" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
               <div class="flex items-center border-b border-gray-300 py-3">
                 <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/solana.svg" alt="solana" />
-                  <p>Solana</p>
+                  <img src="./src/img/svg/frog.svg" alt="frog" />
+                  <p>Frog</p>
+                </div>
+                <div class="flex w-full items-center space-x-1">
+                  <span class="text-red-500">-</span>
+                  <span>$0.5875</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="113"
+                    height="40"
+                    viewBox="0 0 113 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.13889 19.9635L0 25V39.5H113V12.4219L109.861 8.8969C106.722 5.37185 100.444 -1.67823 94.1667 0.364578C87.8889 2.40739 81.6111 13.5431 75.3333 14.8148C69.0556 16.0866 62.7778 7.49433 56.5 6.67652C50.2222 5.85871 43.9444 12.8153 37.6667 12.1284C31.3889 11.4415 25.1111 3.11112 18.8333 3.98247C12.5556 4.85381 6.27778 14.9269 3.13889 19.9635Z"
+                      fill="url(#paint0_linear_1_177)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_177"
+                        x1="56.5"
+                        y1="-1.5"
+                        x2="56.5"
+                        y2="36.5"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#FFBDBD" />
+                        <stop offset="1" stop-color="#FFBDBD" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex items-center border-b border-gray-300 py-3">
+                <div class="flex w-full items-center space-x-2">
+                  <img src="./src/img/svg/musk-doge.svg" alt="Musk Doge" />
+                  <p>Musk Doge</p>
                 </div>
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-green-500">+</span>
-                  <span> $150,20 </span>
+                  <span>$0.04041</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="113"
+                    height="39"
+                    viewBox="0 0 113 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.13889 20.4311L0 19.313V38.5H113V15.8681L109.861 14.0301C106.722 12.192 100.444 8.51578 94.1667 8.74006C87.8889 8.96433 81.6111 13.0891 75.3333 13.6041C69.0556 14.1191 62.7778 11.0243 56.5 6.971C50.2222 2.91767 43.9444 -2.09427 37.6667 0.92107C31.3889 3.93641 25.1111 14.979 18.8333 19.3822C12.5556 23.7854 6.27778 21.5492 3.13889 20.4311Z"
+                      fill="url(#paint0_linear_1_179)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_179"
+                        x1="56.5"
+                        y1="-3.5"
+                        x2="56.5"
+                        y2="35.5"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
               <div class="flex items-center py-3">
                 <div class="flex w-full items-center space-x-2">
-                  <img src="./src/img/svg/dogecoin.svg" alt="dogecoin" />
-                  <p>Dogecoin</p>
+                  <img src="./src/img/svg/2-share.svg" alt="2 share" />
+                  <p>2SHARE</p>
                 </div>
                 <div class="flex w-full items-center space-x-1">
                   <span class="text-green-500">+</span>
-                  <span>$0.1572</span>
+                  <span>$1,366.24</span>
+                </div>
+                <div class="hidden lg:block">
+                  <svg
+                    width="110"
+                    height="41"
+                    viewBox="0 0 110 41"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.13889 14.2825L0 13.0701V40.5H109.861V21.0784C106.722 18.1568 100.444 12.3136 94.1667 13.3752C87.8889 14.4369 81.6111 22.4033 75.3333 21.8189C69.0556 21.2344 62.7778 12.0991 56.5 6.37921C50.2222 0.659311 43.9444 -1.64517 37.6667 1.25165C31.3889 4.14847 25.1111 12.2466 18.8333 15.0832C12.5556 17.9198 6.27778 15.495 3.13889 14.2825Z"
+                      fill="url(#paint0_linear_1_182)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_182"
+                        x1="54.9305"
+                        y1="-8"
+                        x2="54.9305"
+                        y2="37"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#5FDF92" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="#5FDF92" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="layout flex flex-col items-center py-16 lg:flex-row-reverse lg:justify-between">
+        <figure class="animate-fly flex w-full items-center justify-center lg:justify-end">
+          <img
+            src="./src/img/section-1.png"
+            alt="Illustration"
+            loading="lazy"
+            class="aspect-square w-full object-contain lg:w-4/5"
+          />
+        </figure>
+
+        <section>
+          <h2 class="lg:text-5xl">Buy & trade on the original crypto exchange.</h2>
+          <p class="my-4 leading-loose text-[#666666] lg:my-6">
+            Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC
+            crypto-currency
+          </p>
+          <div class="flex flex-col space-y-4">
+            <div class="flex w-full space-x-4">
+              <div
+                class="divide-primary-50 border-primary-50 flex w-full items-stretch divide-x rounded-xl border px-4 py-6"
+              >
+                <span class="text-primary-50 pr-4">Amount</span>
+                <input type="number" class="h-full w-full bg-transparent px-2 outline-none" />
+              </div>
+              <div
+                class="border-primary-50 flex w-[100px] items-center space-x-2 rounded-xl border py-6 px-4 lg:w-[200px]"
+              >
+                <img src="./src/img/svg/usa-flag.svg" alt="USA Flag" />
+                <span>USD</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="flex w-full space-x-4">
+              <div
+                class="divide-primary-50 border-primary-50 flex w-full items-stretch divide-x rounded-xl border px-4 py-6"
+              >
+                <span class="text-primary-50 pr-4">Get</span>
+                <input type="number" class="h-full w-full bg-transparent px-2 outline-none" />
+              </div>
+              <div
+                class="border-primary-50 flex w-[100px] items-center space-x-2 rounded-xl border py-6 px-4 lg:w-[200px]"
+              >
+                <img src="./src/img/svg/bitcoin.svg" alt="Bitcoin" />
+                <span>USD</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+
+            <button class="btn btn-primary justify-center py-2.5 lg:py-3">Buy Now</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- <div class="bg-trusted">
+        <div class="layout flex items-center justify-center">
+          <h2>Trusted Partners Worldwide</h2>
+          <p class="my-4">We're partners with countless major organisations around the globe</p>
+        </div>
+      </div> -->
     </main>
 
     <script src="./src/script/DOM.js"></script>

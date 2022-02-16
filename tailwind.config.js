@@ -14,12 +14,12 @@ module.exports = {
         },
       },
       animation: {
-        fly: "fly 1s linear infinite",
+        fly: "fly 2s linear infinite",
       },
       keyframes: {
         fly: {
           "0, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(100px)" },
+          "50%": { transform: "translateY(10px)" },
         },
       },
     },
