@@ -23,6 +23,13 @@ const handleAside = (aside, isClose = false) => {
   }
 };
 
+/**
+ * `eventMaker` is a function that takes three arguments: `element`, `type`, and `callback`. It adds an
+ * event listener to the `element` with the `type` and `callback` function
+ * @param {HTMLElement} element - The element that you want to attach the event to.
+ * @param {keyof HTMLElementEventMap} type - The type of event to listen for.
+ * @param {() => any} callback - The function that will be called when the event is triggered.
+ */
 const eventMaker = (element, type, callback) => element.addEventListener(type, callback);
 
 eventMaker(openAsideButton, "click", () => handleAside(aside));
