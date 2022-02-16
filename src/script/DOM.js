@@ -27,4 +27,4 @@ const eventMaker = (element, type, callback) => element.addEventListener(type, c
 
 eventMaker(openAsideButton, "click", () => handleAside(aside));
 eventMaker(closeAsideButton, "click", () => handleAside(aside, true));
-anchorInsideNav.forEach((element) => eventMaker(element, "click", () => handleAside(aside)));
+anchorInsideNav.forEach((element) => eventMaker(element, "click", () => handleAside(aside, true)));
