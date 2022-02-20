@@ -605,6 +605,10 @@ input[type="number"] {
   margin-bottom: 0.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -649,10 +653,6 @@ input[type="number"] {
   height: 1rem;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
 .min-h-\[calc\(100vh-7rem\)\] {
   min-height: calc(100vh - 7rem);
 }
@@ -683,6 +683,10 @@ input[type="number"] {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .flex-auto {
@@ -719,6 +723,21 @@ input[type="number"] {
           animation: fly 2s linear infinite;
 }
 
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -727,8 +746,8 @@ input[type="number"] {
   flex-direction: column;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -855,12 +874,21 @@ input[type="number"] {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(14 165 233 / 0));
 }
 
+.from-primary-50 {
+  --tw-gradient-from: #468EF9;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(70 142 249 / 0));
+}
+
 .to-indigo-100 {
   --tw-gradient-to: #e0e7ff;
 }
 
 .to-blue-500 {
   --tw-gradient-to: #3b82f6;
+}
+
+.to-sky-400 {
+  --tw-gradient-to: #38bdf8;
 }
 
 .bg-clip-text {
@@ -1083,6 +1111,26 @@ input[type="number"] {
   background-repeat: no-repeat;
 }
 
+.marker\:text-2xl *::marker {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.marker\:content-\[\1F35A\] *::marker {
+  --tw-content: 🍚;
+  content: var(--tw-content);
+}
+
+.marker\:text-2xl::marker {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.marker\:content-\[\1F35A\]::marker {
+  --tw-content: 🍚;
+  content: var(--tw-content);
+}
+
 .hover\:text-primary-50:hover {
   --tw-text-opacity: 1;
   color: rgb(70 142 249 / var(--tw-text-opacity));
@@ -1119,39 +1167,43 @@ input[type="number"] {
 }
 
 @media (min-width: 768px) {
+  .md\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .md\:mb-4 {
     margin-bottom: 1rem;
+  }
+
+  .md\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .md\:hidden {
     display: none;
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .md\:w-full {
+    width: 100%;
   }
 
-  .md\:flex-row {
-    flex-direction: row;
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:gap-4 {
     gap: 1rem;
   }
 
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .md\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -1221,6 +1273,12 @@ input[type="number"] {
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:divide-x > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(1px * var(--tw-divide-x-reverse));
@@ -1240,6 +1298,11 @@ input[type="number"] {
   .lg\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .lg\:text-left {
