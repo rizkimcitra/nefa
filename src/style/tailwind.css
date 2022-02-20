@@ -649,6 +649,10 @@ input[type="number"] {
   height: 1rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .min-h-\[calc\(100vh-7rem\)\] {
   min-height: calc(100vh - 7rem);
 }
@@ -679,10 +683,6 @@ input[type="number"] {
 
 .w-4 {
   width: 1rem;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .flex-auto {
@@ -727,6 +727,10 @@ input[type="number"] {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -745,6 +749,10 @@ input[type="number"] {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -792,10 +800,6 @@ input[type="number"] {
 .divide-primary-50 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(70 142 249 / var(--tw-divide-opacity));
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .overflow-y-hidden {
@@ -1072,11 +1076,11 @@ input[type="number"] {
   color: rgb(70 142 249 / var(--tw-text-opacity));
 }
 
-.bg-trusted {
-  background-image: url(./src/img/svg/bg-trusted.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.bg-custom {
+  background-image: url("/src/img/svg/trusted-bg.svg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hover\:text-primary-50:hover {
@@ -1087,6 +1091,10 @@ input[type="number"] {
 @media (min-width: 640px) {
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -1111,8 +1119,39 @@ input[type="number"] {
 }
 
 @media (min-width: 768px) {
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .md\:hidden {
     display: none;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .md\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -1148,6 +1187,10 @@ input[type="number"] {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {

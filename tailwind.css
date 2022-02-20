@@ -49,11 +49,8 @@
   .btn-secondary {
     @apply border-primary-50 text-primary-50 bg-transparent;
   }
-}
-
-.bg-trusted {
-  background-image: url(./src/img/svg/bg-trusted.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  .bg-custom {
+    background-image: url("/src/img/svg/trusted-bg.svg");
+    @apply bg-cover bg-center bg-no-repeat;
+  }
 }
